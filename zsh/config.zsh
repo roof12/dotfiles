@@ -17,7 +17,6 @@ SAVEHIST=10000
 
 setopt NO_BG_NICE # don't nice background tasks
 setopt NO_HUP
-setopt NO_LIST_BEEP
 setopt LOCAL_OPTIONS # allow functions to have local options
 setopt LOCAL_TRAPS # allow functions to have local traps
 setopt HIST_VERIFY
@@ -27,6 +26,11 @@ setopt PROMPT_SUBST
 # turn this thing off until i figure out how to make it behave
 # setopt CORRECT
 setopt COMPLETE_IN_WORD
+
+# completion
+setopt NO_AUTO_MENU
+setopt NO_MENU_COMPLETE
+setopt NO_LIST_BEEP
 
 setopt APPEND_HISTORY # adds history
 setopt INC_APPEND_HISTORY SHARE_HISTORY  # adds history incrementally and share it across sessions
