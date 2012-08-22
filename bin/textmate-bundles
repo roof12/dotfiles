@@ -7,17 +7,20 @@ bundle_dir = "#{ENV['HOME']}/Library/Application\ Support/TextMate/Bundles"
 FileUtils.mkdir_p bundle_dir unless File.directory? bundle_dir
 
 git_bundles = [
-  ["https://github.com/cburyta/", "puppet-textmate.tmbundle"]
+  ["https://github.com/cburyta/puppet-textmate.tmbundle", "puppet-textmate.tmbundle"],
+  ["git://github.com/cucumber/cucumber-tmbundle.git", "cucumber.tmbundle"],
+  ["git://github.com/textmate/ruby-haml.tmbundle.git", "ruby-haml.tmbundle"],
 ]
 
-git_bundles.each do |base, name|
+git_bundles.each do |url, name|
   if File.directory? "#{bundle_dir}/#{name}"
     puts "Updating #{name}..."
     system "cd '#{bundle_dir}/#{name}' && git pull"
   else
     puts "Cloning #{name}"
-    system "cd '#{bundle_dir}' && git clone #{base}/#{name}"
+    system "cd '#{bundle_dir}' && git clone #{url} #{name}"
   end
 end
 
 system "osascript -e 'tell app \"TextMate\" to reload bundles'"
+puts "Reloaded TextMate bundles."
