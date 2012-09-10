@@ -10,6 +10,8 @@ git_bundles = [
   ["https://github.com/cburyta/puppet-textmate.tmbundle", "puppet-textmate.tmbundle"],
   ["git://github.com/cucumber/cucumber-tmbundle.git", "cucumber.tmbundle"],
   ["git://github.com/textmate/ruby-haml.tmbundle.git", "ruby-haml.tmbundle"],
+  ["https://github.com/joshaven/RDoc.tmbundle.git", "rdoc.tmbundle"],
+  ["https://github.com/lsegal/yard-tmbundle.git", "yard.tmbundle"],
 ]
 
 git_bundles.each do |url, name|
@@ -18,6 +20,7 @@ git_bundles.each do |url, name|
     system "cd '#{bundle_dir}/#{name}' && git pull"
   else
     puts "Cloning #{name}"
+    puts "Into #{bundle_dir}"
     system "cd '#{bundle_dir}' && git clone #{url} #{name}"
   end
 end
