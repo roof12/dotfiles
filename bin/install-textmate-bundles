@@ -13,6 +13,7 @@ git_bundles = [
   ["https://github.com/joshaven/RDoc.tmbundle.git", "rdoc.tmbundle"],
   ["https://github.com/lsegal/yard-tmbundle.git", "yard.tmbundle"],
   ["https://github.com/drnic/Handlebars.tmbundle.git", "handlebars.tmbundle"],
+  ["https://github.com/jashkenas/coffee-script-tmbundle.git", "coffeescript.tmbundle"],
 ]
 
 git_bundles.each do |url, name|
