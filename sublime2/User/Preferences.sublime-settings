@@ -1,0 +1,24 @@
+// Place user-specific overrides in this file, to ensure they're preserved
+// when upgrading
+{
+  "theme": "Soda Dark.sublime-theme",
+  "font_size": 13,
+  "rulers": [ 80 ],
+
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+  "highlight_modified_tabs": true,
+
+  "draw_white_space": "all",
+  "trim_trailing_white_space_on_save": true,
+
+  "match_brackets_angle": true,
+  "match_brackets_braces": true,
+  "match_brackets_square": true,
+
+  // doesnt work
+  "show_minimap": false,
+  "vintage_start_in_command_mode": true,
+
+  "bogus": true
+}
