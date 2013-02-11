@@ -2,7 +2,7 @@
 // when upgrading
 {
   "theme": "Soda Dark.sublime-theme",
-  "font_size": 13,
+  "font_size": 15,
   "rulers": [ 80 ],
 
   "tab_size": 2,
@@ -16,9 +16,5 @@
   "match_brackets_braces": true,
   "match_brackets_square": true,
 
-  // doesnt work
-  "show_minimap": false,
-  "vintage_start_in_command_mode": true,
-
-  "bogus": true
+  "this_prevents_me_from_worrying_about_removing_the_trailing_comma": true
 }
