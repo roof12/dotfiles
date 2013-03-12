@@ -7,10 +7,12 @@ installed_packages_dir="$sublime_dir/Installed Packages"
 
 # User files
 if [ ! -d "$packages_dir/User.backup" ]; then
-  echo Updating User files
+  echo Backing up existing User files
   mv "$packages_dir/User" "$packages_dir/User.backup"
-  cp -R "$ZSH/sublime2/User" "$packages_dir"
 fi
+
+echo "Updating User files"
+cp -R "$ZSH/sublime2/User" "$packages_dir"
 
 # soda theme
 if [ ! -d "${packages_dir}/Theme - Soda" ]; then
@@ -24,3 +26,6 @@ if [ ! -f "${installed_packages_dir}/Package Control.sublime-package" ]; then
   cd "$installed_packages_dir"
   wget https://sublime.wbond.net/testing/Package%20Control.sublime-package
 fi
+
+# Package control must be used by hand to install: Puppet
+# This should be added to the script.
