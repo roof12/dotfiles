@@ -24,6 +24,7 @@ for config_file ($ZSH/**/completion.sh) source $config_file
 # rbenv
 if [[ -d "$HOME/.rbenv" ]]
 then
+  PATH=$PATH:$HOME/.rbenv/bin
   eval "$(rbenv init -)"
 fi
 
